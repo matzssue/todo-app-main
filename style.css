@@ -30,6 +30,7 @@ body {
     align-items: center;
     background-color: rgb(243, 240, 240);
     flex-direction: column;
+
     
 }
 .input {
@@ -45,7 +46,6 @@ body {
     padding: 1em;
 }
 
-
 .task-background {
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ body {
     width: 50vw;
     box-shadow: 1px 20px 12px 0px rgb(66 68 90);
     justify-content: flex-start;
-
+    border-radius: 0.4em;
 }
 
 #addInputBar {
@@ -89,9 +89,10 @@ body {
     cursor: pointer;
 }
 .task-text {
-    color: white;
+    color: black;
     margin-left: 2em;
     font-size: 1em;
+    
 
 }
 .task-container {
@@ -101,6 +102,8 @@ body {
     border-bottom: 1px solid;
     border-color: rgba(85, 85, 85, 0.5);
     padding: 0.7em;
+    margin-top: 0.2em;
+    position: relative;
     
 }
 .task-background .buttons {
@@ -128,11 +131,44 @@ body {
 
 .btn-all, 
 .btn-active,
-.btn-completed
+.btn-completed,
+.btn-clear
  {
-    
+    color: grey;
+    background-color: white;
+    cursor: pointer;
+    border: 0px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+
  }
 
-.btn-clear {
+ .btn-all:hover, 
+ .btn-active:hover,
+ .btn-completed:hover,
+ .btn-clear:hover {
+    color: black
+ }
+ .btn-all:focus, 
+ .btn-active:focus,
+ .btn-completed:focus,
+ .btn-clear:focus {
+    color: hsl(220, 98%, 61%)
+ }
+ .close-btn{
+    display: none;
+ }
 
-}
+ .task-container:hover .close-btn{
+    display: block;
+    border: 0px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    cursor: pointer;
+ }
+
+ .btn-nocheck:hover {
+    border-color: rgb(150, 0, 163)
+ }
