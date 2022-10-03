@@ -1,20 +1,44 @@
+const all = document.querySelector(".btn-all")
+const active = document.querySelector(".btn-active")
+const completed = document.querySelector(".btn-completed")
+const clear = document.querySelector(".btn-clear")
 
-// const taskText = document.querySelectorAll(".task-text")
-// const check = `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>`
 
+clear.addEventListener("click", function onClick() {
+    let completedList = document.querySelectorAll(".container-check")
+    completedList.forEach(element => {
+       element.remove()
+    });
+   
+})
 
-// const addClassToSpan = () => {
-// taskText.forEach(span => span.classList.add("text-check"))
-// }
+completed.addEventListener("click", function onClick(){
+    let allBtns = document.querySelectorAll(".btn-nocheck")
+    allBtns.forEach(elem => {
+        elem.closest(".task-container").style.display = "flex"
+        if(elem.classList.contains("btn-check")) {
+        }
+        else{elem.closest(".task-container").style.display = "none"}
+}
+    )
+})
 
-// const addStyles = () => {
-//     let buttons = document.querySelectorAll(".btn-nocheck")
-//     buttons.forEach(button => {
-//         button.addEventListener("click", function () {
-//         button.innerHTML = check
-//         button.classList.add("btn-check")
-//         addClassToSpan()
-//         console.log('what')
-//     })
-// })
-// }
+active.addEventListener("click", function onClick(){
+    let allBtns = document.querySelectorAll(".btn-nocheck")
+    allBtns.forEach(elem => {
+        elem.closest(".task-container").style.display = "flex"
+        if(elem.classList.contains("btn-check")) {
+            elem.closest(".task-container").style.display = "none"
+        }
+        else{}
+}
+    )
+})
+
+all.addEventListener("click", function onClick() {
+    let completedList = document.querySelectorAll(".task-container")
+    completedList.forEach(element => { element.style.display = "flex"
+       
+    });
+   
+})
