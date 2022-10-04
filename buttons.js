@@ -1,4 +1,4 @@
-
+// import {deleteLocalTodo} from "./taskCreator.js"
 export const all = document.querySelector(".btn-all")
 const active = document.querySelector(".btn-active")
 const completed = document.querySelector(".btn-completed")

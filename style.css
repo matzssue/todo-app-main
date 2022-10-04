@@ -172,3 +172,6 @@ body {
  .btn-nocheck:hover {
     border-color: rgb(150, 0, 163)
  }
+ .dragging {
+    opacity: 0.5;
+ }
